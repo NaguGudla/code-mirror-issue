@@ -1,0 +1,9 @@
+<h1>ngx-codemirror Cursor bug demo</h1>
+
+<p>Working Senario: type {{"${"}} and hit ctrl+space menu will open. Ex: "menu will open here {{"${"}} 'ctrl+space'"</p>
+<p>Failure Senario: type "(" before {{"${"}} and hit ctrl+space menu will not open. Ex: "menu will not open here(
+    {{"${"}}'ctrl+space'"</p>
+Note: if "(" is at start of line then it works as expected, But when it is added in between of any literal it fails.
+
+<ngx-codemirror #codeEditor [(ngModel)]="sourceCode" [options]="options">
+</ngx-codemirror>
